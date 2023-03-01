@@ -9,5 +9,34 @@ import Foundation
 
 struct MealService {
     
+    static func fetchAllCategories(completion: @escaping (Result<[Category], NetworkError>) -> Void) {
+        
+        guard let finalURL = URL(string: Constants.MealService.allCategoriesBaseURL) else { completion(.failure(.invalidURL)) ; return }
+        print("Categories URL: \(finalURL)")
+        
+        URLSession.shared.dataTask(with: finalURL) { data, response, error in
+            if let error = error {
+                completion(.failure(.thrownError(error))) ; return
+            }
+            
+            if let response = response as? HTTPURLResponse {
+                print("Categories Status Code: \(response.statusCode)")
+            }
+            
+            guard let data = data else { completion(.failure(.noData)) ; return }
+            
+            do {
+                
+                let topLevel = try JSONDecoder().decode(CategoryTopLevelDictionary.self, from: data)
+                completion(.success(topLevel.categories))
+            } catch {
+                print("There was an error decoding the data: \(error.localizedDescription)")
+                completion(.failure(.unableToDecode)) ; return
+            }
+        } .resume()
+    }
     
+    static func fetchMealsInCategory() {
+        
+    }
 }
