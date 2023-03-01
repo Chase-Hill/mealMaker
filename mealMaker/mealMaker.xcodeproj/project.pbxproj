@@ -9,21 +9,21 @@
 /* Begin PBXBuildFile section */
 		AF561BB029AFACF7000EF400 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF561BAF29AFACF7000EF400 /* AppDelegate.swift */; };
 		AF561BB229AFACF7000EF400 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF561BB129AFACF7000EF400 /* SceneDelegate.swift */; };
-		AF561BB429AFACF7000EF400 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF561BB329AFACF7000EF400 /* ViewController.swift */; };
 		AF561BB729AFACF7000EF400 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF561BB529AFACF7000EF400 /* Main.storyboard */; };
 		AF561BB929AFACF8000EF400 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF561BB829AFACF8000EF400 /* Assets.xcassets */; };
 		AF561BBC29AFACF8000EF400 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF561BBA29AFACF8000EF400 /* LaunchScreen.storyboard */; };
+		AF561BC629AFADB8000EF400 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF561BC529AFADB8000EF400 /* Meal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AF561BAC29AFACF7000EF400 /* mealMaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mealMaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF561BAF29AFACF7000EF400 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF561BB129AFACF7000EF400 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AF561BB329AFACF7000EF400 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AF561BB629AFACF7000EF400 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AF561BB829AFACF8000EF400 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF561BBB29AFACF8000EF400 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AF561BBD29AFACF8000EF400 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF561BC529AFADB8000EF400 /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +56,39 @@
 		AF561BAE29AFACF7000EF400 /* mealMaker */ = {
 			isa = PBXGroup;
 			children = (
-				AF561BAF29AFACF7000EF400 /* AppDelegate.swift */,
-				AF561BB129AFACF7000EF400 /* SceneDelegate.swift */,
-				AF561BB329AFACF7000EF400 /* ViewController.swift */,
-				AF561BB529AFACF7000EF400 /* Main.storyboard */,
-				AF561BB829AFACF8000EF400 /* Assets.xcassets */,
-				AF561BBA29AFACF8000EF400 /* LaunchScreen.storyboard */,
-				AF561BBD29AFACF8000EF400 /* Info.plist */,
+				AF561BC329AFAD86000EF400 /* SupportingFiles */,
+				AF561BC429AFAD94000EF400 /* Storyboard */,
+				AF561BC729AFADC0000EF400 /* Model */,
 			);
 			path = mealMaker;
+			sourceTree = "<group>";
+		};
+		AF561BC329AFAD86000EF400 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				AF561BAF29AFACF7000EF400 /* AppDelegate.swift */,
+				AF561BB129AFACF7000EF400 /* SceneDelegate.swift */,
+				AF561BB829AFACF8000EF400 /* Assets.xcassets */,
+				AF561BBD29AFACF8000EF400 /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		AF561BC429AFAD94000EF400 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				AF561BB529AFACF7000EF400 /* Main.storyboard */,
+				AF561BBA29AFACF8000EF400 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		AF561BC729AFADC0000EF400 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AF561BC529AFADB8000EF400 /* Meal.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +162,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF561BB429AFACF7000EF400 /* ViewController.swift in Sources */,
 				AF561BB029AFACF7000EF400 /* AppDelegate.swift in Sources */,
+				AF561BC629AFADB8000EF400 /* Meal.swift in Sources */,
 				AF561BB229AFACF7000EF400 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -288,7 +312,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = mealMaker/Info.plist;
+				INFOPLIST_FILE = mealMaker/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -315,7 +339,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = mealMaker/Info.plist;
+				INFOPLIST_FILE = mealMaker/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
