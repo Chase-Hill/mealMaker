@@ -19,6 +19,7 @@
 		AF561BD129AFB466000EF400 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF561BD029AFB466000EF400 /* Constants.swift */; };
 		AF561BD529AFC1BB000EF400 /* CategoryListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF561BD429AFC1BB000EF400 /* CategoryListTableViewController.swift */; };
 		AF561BD729AFC1C3000EF400 /* MealListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF561BD629AFC1C3000EF400 /* MealListTableViewController.swift */; };
+		AF561BD929AFD067000EF400 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF561BD829AFD067000EF400 /* Recipe.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		AF561BD029AFB466000EF400 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		AF561BD429AFC1BB000EF400 /* CategoryListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListTableViewController.swift; sourceTree = "<group>"; };
 		AF561BD629AFC1C3000EF400 /* MealListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealListTableViewController.swift; sourceTree = "<group>"; };
+		AF561BD829AFD067000EF400 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 			children = (
 				AF561BC529AFADB8000EF400 /* Category.swift */,
 				AF561BC829AFB067000EF400 /* Meal.swift */,
+				AF561BD829AFD067000EF400 /* Recipe.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -214,6 +217,7 @@
 			files = (
 				AF561BC929AFB067000EF400 /* Meal.swift in Sources */,
 				AF561BD529AFC1BB000EF400 /* CategoryListTableViewController.swift in Sources */,
+				AF561BD929AFD067000EF400 /* Recipe.swift in Sources */,
 				AF561BB029AFACF7000EF400 /* AppDelegate.swift in Sources */,
 				AF561BC629AFADB8000EF400 /* Category.swift in Sources */,
 				AF561BCF29AFB2DF000EF400 /* NetworkError.swift in Sources */,

@@ -31,7 +31,6 @@ struct MealService {
                 completion(.success(topLevel.categories))
             } catch {
                 
-                print("There was an error decoding the category data: \(error.localizedDescription)")
                 completion(.failure(.unableToDecode)) ; return
             }
         } .resume()
@@ -63,7 +62,43 @@ struct MealService {
                 completion(.success(topLevel.meals))
             } catch {
                 
-                print("There was an error decoding the meal data: \(error.localizedDescription)")
+                completion(.failure(.unableToDecode)) ; return
+            }
+        } .resume()
+    }
+    
+    static func fetchRecipe(forMeal meal: Meal, completion: @escaping (Result<Recipe, NetworkError>) -> Void) {
+        
+        guard let baseURL = URL(string: Constants.MealService.recipeBaseURL) else { completion(.failure(.invalidURL)) ; return }
+        var urlComponents = URLComponents(url: baseURL, resolvingAgainstBaseURL: true)
+        let recipeQueryItem = URLQueryItem(name: Constants.MealService.recipeQueryKey, value: meal.mealID)
+        urlComponents?.queryItems = [recipeQueryItem]
+        
+        guard let finalURL = urlComponents?.url else { completion(.failure(.invalidURL)) ; return }
+        print("Recipe URL: \(finalURL)")
+        
+        URLSession.shared.dataTask(with: finalURL) { data, response, error in
+            if let error = error {
+                completion(.failure(.thrownError(error))) ; return
+            }
+            
+            if let response = response as? HTTPURLResponse {
+                print("Recipe Status Code: \(response.statusCode)")
+            }
+            
+            guard let data = data else { completion(.failure(.noData)) ; return }
+            
+            do {
+                
+                let topLevel = try JSONDecoder().decode(RecipeTopLevelDictionary.self, from: data)
+                if let recipe = topLevel.meals.first {
+                    completion(.success(recipe))
+                } else {
+                    completion(.failure(.emptyArray))
+                    return
+                }
+            } catch {
+                
                 completion(.failure(.unableToDecode)) ; return
             }
         } .resume()
