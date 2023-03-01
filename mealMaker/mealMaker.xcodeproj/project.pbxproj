@@ -17,6 +17,8 @@
 		AF561BCC29AFB1B4000EF400 /* MealService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF561BCB29AFB1B4000EF400 /* MealService.swift */; };
 		AF561BCF29AFB2DF000EF400 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF561BCE29AFB2DF000EF400 /* NetworkError.swift */; };
 		AF561BD129AFB466000EF400 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF561BD029AFB466000EF400 /* Constants.swift */; };
+		AF561BD529AFC1BB000EF400 /* CategoryListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF561BD429AFC1BB000EF400 /* CategoryListTableViewController.swift */; };
+		AF561BD729AFC1C3000EF400 /* MealListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF561BD629AFC1C3000EF400 /* MealListTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		AF561BCB29AFB1B4000EF400 /* MealService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealService.swift; sourceTree = "<group>"; };
 		AF561BCE29AFB2DF000EF400 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		AF561BD029AFB466000EF400 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		AF561BD429AFC1BB000EF400 /* CategoryListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListTableViewController.swift; sourceTree = "<group>"; };
+		AF561BD629AFC1C3000EF400 /* MealListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealListTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,10 +68,11 @@
 		AF561BAE29AFACF7000EF400 /* mealMaker */ = {
 			isa = PBXGroup;
 			children = (
-				AF561BCD29AFB2D0000EF400 /* Helper & Extensions */,
-				AF561BCA29AFB1A5000EF400 /* Networking */,
 				AF561BC329AFAD86000EF400 /* SupportingFiles */,
 				AF561BC429AFAD94000EF400 /* Storyboard */,
+				AF561BD229AFC19B000EF400 /* Controllers */,
+				AF561BCD29AFB2D0000EF400 /* Helper & Extensions */,
+				AF561BCA29AFB1A5000EF400 /* Networking */,
 				AF561BC729AFADC0000EF400 /* Model */,
 			);
 			path = mealMaker;
@@ -117,6 +122,23 @@
 				AF561BD029AFB466000EF400 /* Constants.swift */,
 			);
 			path = "Helper & Extensions";
+			sourceTree = "<group>";
+		};
+		AF561BD229AFC19B000EF400 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AF561BD329AFC1A2000EF400 /* ViewControllers */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		AF561BD329AFC1A2000EF400 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				AF561BD429AFC1BB000EF400 /* CategoryListTableViewController.swift */,
+				AF561BD629AFC1C3000EF400 /* MealListTableViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,12 +213,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF561BC929AFB067000EF400 /* Meal.swift in Sources */,
+				AF561BD529AFC1BB000EF400 /* CategoryListTableViewController.swift in Sources */,
 				AF561BB029AFACF7000EF400 /* AppDelegate.swift in Sources */,
 				AF561BC629AFADB8000EF400 /* Category.swift in Sources */,
 				AF561BCF29AFB2DF000EF400 /* NetworkError.swift in Sources */,
 				AF561BD129AFB466000EF400 /* Constants.swift in Sources */,
 				AF561BCC29AFB1B4000EF400 /* MealService.swift in Sources */,
 				AF561BB229AFACF7000EF400 /* SceneDelegate.swift in Sources */,
+				AF561BD729AFC1C3000EF400 /* MealListTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
