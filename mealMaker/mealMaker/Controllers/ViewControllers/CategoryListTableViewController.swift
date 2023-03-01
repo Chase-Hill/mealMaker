@@ -33,6 +33,14 @@ class CategoryListTableViewController: UITableViewController {
         }
     }
     
+    func configCell(cell: UITableViewCell, category: Category) {
+        var config = cell.defaultContentConfiguration()
+        
+        config.text = category.categoryName
+        config.secondaryText = category.description
+        cell.contentConfiguration = config
+    }
+    
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return categoryArray.count
@@ -42,17 +50,18 @@ class CategoryListTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "categoryCell", for: indexPath)
 
         let category = categoryArray[indexPath.row]
-        
-        var config = cell.defaultContentConfiguration()
-        config.text = category.categoryName
-        cell.contentConfiguration = config
+        configCell(cell: cell, category: category)
 
         return cell
     }
 
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "toMealListVC" {
+            guard let indexPath = tableView.indexPathForSelectedRow,
+                  let destinationVC = segue.destination as? MealListTableViewController else { return }
+            let category = categoryArray[indexPath.row]
+            destinationVC.category = category
+        }
     }
 }
