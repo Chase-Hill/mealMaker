@@ -183,6 +183,14 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Recipe" id="U6H-Fu-A8p"/>
+                    <connections>
+                        <outlet property="ingredientsTableView" destination="GPv-S0-ikv" id="PzK-PR-ZXy"/>
+                        <outlet property="recipeAreaLabel" destination="v14-my-jZC" id="Nxx-0z-pCX"/>
+                        <outlet property="recipeImageView" destination="Z0b-7f-Rjc" id="Xw2-m4-4eR"/>
+                        <outlet property="recipeInstructionsLabel" destination="zax-mk-XIb" id="Cnh-Qw-AWf"/>
+                        <outlet property="recipeNameLabel" destination="dFw-KX-u2V" id="Ok7-xj-s0t"/>
+                        <outlet property="recipeYTLink" destination="7bn-gO-tcU" id="z0E-gX-HEQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8uq-Id-SQb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="Sd6-2b-y6a">
@@ -221,6 +229,9 @@
                             <constraint firstItem="OYM-cB-pcE" firstAttribute="bottom" secondItem="zQp-CY-GPP" secondAttribute="bottom" id="wPi-ct-w9I"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="instructionsTextView" destination="zQp-CY-GPP" id="hxn-Sj-Okp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G3l-aQ-yzv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

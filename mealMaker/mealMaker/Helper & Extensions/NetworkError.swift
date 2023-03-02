@@ -13,6 +13,7 @@ enum NetworkError: LocalizedError {
     case noData
     case unableToDecode
     case emptyArray
+    case invalidStatusCode
     
     var errorDescription: String? {
         switch self {
@@ -26,6 +27,8 @@ enum NetworkError: LocalizedError {
             return "Unable to decode the data from network."
         case .emptyArray:
             return "No recipe found in data."
+        case .invalidStatusCode:
+            return "Invalid status code. Code was not 200."
         }
     }
 }

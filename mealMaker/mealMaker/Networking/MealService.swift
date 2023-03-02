@@ -5,7 +5,7 @@
 //  Created by Chase on 3/1/23.
 //
 
-import Foundation
+import UIKit
 
 struct MealService {
     
@@ -86,7 +86,7 @@ struct MealService {
                 print("Recipe Status Code: \(response.statusCode)")
             }
             
-            guard let data = data else { completion(.failure(.noData)) ; return }
+            guard let data = data, !data.isEmpty else { completion(.failure(.noData)) ; return }
             
             do {
                 
@@ -101,6 +101,30 @@ struct MealService {
                 
                 completion(.failure(.unableToDecode)) ; return
             }
+        } .resume()
+    }
+    
+    static func fetchImage(for item: String?, completion: @escaping (Result<UIImage, NetworkError>) -> Void) {
+        
+        guard let item = item else { completion(.success(UIImage(named: "Samurai")!)) ; return }
+        
+        guard let finalURL = URL(string: item) else { completion(.failure(.invalidURL)) ; return }
+        print("Final Image URL: \(finalURL)")
+        
+        URLSession.shared.dataTask(with: finalURL) { data, response, error in
+            if let error = error {
+                completion(.failure(.thrownError(error))) ; return
+            }
+            
+            guard let response = response as? HTTPURLResponse,
+                  (200...299).contains(response.statusCode) else {
+                completion(.failure(.invalidStatusCode)) ; return
+            }
+            
+            guard let data = data, !data.isEmpty else { completion(.failure(.noData)) ; return }
+            
+            guard let image = UIImage(data: data) else { completion(.failure(.unableToDecode)) ; return }
+            completion(.success(image))
         } .resume()
     }
 }

@@ -19,6 +19,6 @@ struct Constants {
     }
     
     struct Error {
-        static let unknownError = "An Unknown Error Has Occured...Call 867-5309"
+        static let unknownError = "An Unknown Error Has Occured...Call 867-5309. Ask For Jenny."
     }
 }

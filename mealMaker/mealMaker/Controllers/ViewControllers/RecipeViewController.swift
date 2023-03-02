@@ -9,21 +9,21 @@ import UIKit
 
 class RecipeViewController: UIViewController {
 
+    // MARK: - Outlets
+    @IBOutlet weak var recipeImageView: UIImageView!
+    @IBOutlet weak var recipeNameLabel: UILabel!
+    @IBOutlet weak var recipeAreaLabel: UILabel!
+    @IBOutlet weak var recipeYTLink: UILabel!
+    @IBOutlet weak var recipeInstructionsLabel: UILabel!
+    @IBOutlet weak var ingredientsTableView: UITableView!
+    
+    // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    // MARK: - Properties
+    var meal: Meal?
+    
 }
