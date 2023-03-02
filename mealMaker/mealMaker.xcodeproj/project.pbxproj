@@ -20,6 +20,8 @@
 		AF561BD529AFC1BB000EF400 /* CategoryListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF561BD429AFC1BB000EF400 /* CategoryListTableViewController.swift */; };
 		AF561BD729AFC1C3000EF400 /* MealListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF561BD629AFC1C3000EF400 /* MealListTableViewController.swift */; };
 		AF561BD929AFD067000EF400 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF561BD829AFD067000EF400 /* Recipe.swift */; };
+		AF561C1429B11BAD000EF400 /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF561C1329B11BAD000EF400 /* RecipeViewController.swift */; };
+		AF561C1629B11BD2000EF400 /* InstructionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF561C1529B11BD2000EF400 /* InstructionsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		AF561BD429AFC1BB000EF400 /* CategoryListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListTableViewController.swift; sourceTree = "<group>"; };
 		AF561BD629AFC1C3000EF400 /* MealListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealListTableViewController.swift; sourceTree = "<group>"; };
 		AF561BD829AFD067000EF400 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		AF561C1329B11BAD000EF400 /* RecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
+		AF561C1529B11BD2000EF400 /* InstructionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +144,8 @@
 			children = (
 				AF561BD429AFC1BB000EF400 /* CategoryListTableViewController.swift */,
 				AF561BD629AFC1C3000EF400 /* MealListTableViewController.swift */,
+				AF561C1329B11BAD000EF400 /* RecipeViewController.swift */,
+				AF561C1529B11BD2000EF400 /* InstructionsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -220,6 +226,8 @@
 				AF561BD929AFD067000EF400 /* Recipe.swift in Sources */,
 				AF561BB029AFACF7000EF400 /* AppDelegate.swift in Sources */,
 				AF561BC629AFADB8000EF400 /* Category.swift in Sources */,
+				AF561C1429B11BAD000EF400 /* RecipeViewController.swift in Sources */,
+				AF561C1629B11BD2000EF400 /* InstructionsViewController.swift in Sources */,
 				AF561BCF29AFB2DF000EF400 /* NetworkError.swift in Sources */,
 				AF561BD129AFB466000EF400 /* Constants.swift in Sources */,
 				AF561BCC29AFB1B4000EF400 /* MealService.swift in Sources */,
