@@ -68,7 +68,7 @@ extension Recipe {
             guard let name = try? ingredientNamesContainer?.decode(String.self, forKey: $0.element),
                   let measurement = try? measurementsContainer?.decode(String.self, forKey: MeasurementsCodingKeys.allCases[$0.offset]),
                   !name.isEmpty,
-                  !measurement.isEmpty else { return }
+                  !measurement.isEmpty else { return nil }
             
             return Ingredient(name: name, measurement: measurement)
         }
