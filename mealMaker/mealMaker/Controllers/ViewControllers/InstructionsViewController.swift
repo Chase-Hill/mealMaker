@@ -16,5 +16,15 @@ class InstructionsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        updateUI()
+    }
+    
+    // MARK: - Properties
+    var instructions: String?
+    
+    // MARK: - Function
+    func updateUI() {
+        guard let instructions = instructions else { return }
+        instructionsTextView.text = instructions
     }
 }

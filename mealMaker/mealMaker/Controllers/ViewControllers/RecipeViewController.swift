@@ -67,7 +67,7 @@ class RecipeViewController: UIViewController {
         if segue.identifier == "toInstructionsVC" {
             guard let recipe = recipe,
                   let destinationVC = segue.destination as? InstructionsViewController else { return }
-            
+            destinationVC.instructions = recipe.instructions
         }
     }
 }
