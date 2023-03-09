@@ -23,6 +23,7 @@
 		AF561C1429B11BAD000EF400 /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF561C1329B11BAD000EF400 /* RecipeViewController.swift */; };
 		AF561C1629B11BD2000EF400 /* InstructionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF561C1529B11BD2000EF400 /* InstructionsViewController.swift */; };
 		AFDA41D129BA82E1007AF208 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDA41D029BA82E1007AF208 /* APIService.swift */; };
+		AFDA41D329BA8F66007AF208 /* CategoryListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDA41D229BA8F66007AF208 /* CategoryListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		AF561C1329B11BAD000EF400 /* RecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
 		AF561C1529B11BD2000EF400 /* InstructionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionsViewController.swift; sourceTree = "<group>"; };
 		AFDA41D029BA82E1007AF208 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		AFDA41D229BA8F66007AF208 /* CategoryListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,7 +80,7 @@
 			children = (
 				AF561BC329AFAD86000EF400 /* SupportingFiles */,
 				AF561BC429AFAD94000EF400 /* Storyboard */,
-				AF561BD229AFC19B000EF400 /* Controllers */,
+				AF561BD229AFC19B000EF400 /* UI */,
 				AF561BCD29AFB2D0000EF400 /* Helper & Extensions */,
 				AF561BC729AFADC0000EF400 /* Model */,
 			);
@@ -115,12 +117,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		AF561BCA29AFB1A5000EF400 /* Networking */ = {
+		AF561BCA29AFB1A5000EF400 /* Category List */ = {
 			isa = PBXGroup;
 			children = (
 				AF561BCB29AFB1B4000EF400 /* MealService.swift */,
+				AFDA41D229BA8F66007AF208 /* CategoryListViewModel.swift */,
+				AF561BD429AFC1BB000EF400 /* CategoryListTableViewController.swift */,
 			);
-			path = Networking;
+			path = "Category List";
 			sourceTree = "<group>";
 		};
 		AF561BCD29AFB2D0000EF400 /* Helper & Extensions */ = {
@@ -133,19 +137,18 @@
 			path = "Helper & Extensions";
 			sourceTree = "<group>";
 		};
-		AF561BD229AFC19B000EF400 /* Controllers */ = {
+		AF561BD229AFC19B000EF400 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				AF561BCA29AFB1A5000EF400 /* Networking */,
+				AF561BCA29AFB1A5000EF400 /* Category List */,
 				AF561BD329AFC1A2000EF400 /* ViewControllers */,
 			);
-			path = Controllers;
+			path = UI;
 			sourceTree = "<group>";
 		};
 		AF561BD329AFC1A2000EF400 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				AF561BD429AFC1BB000EF400 /* CategoryListTableViewController.swift */,
 				AF561BD629AFC1C3000EF400 /* MealListTableViewController.swift */,
 				AF561C1329B11BAD000EF400 /* RecipeViewController.swift */,
 				AF561C1529B11BD2000EF400 /* InstructionsViewController.swift */,
@@ -225,6 +228,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF561BC929AFB067000EF400 /* Meal.swift in Sources */,
+				AFDA41D329BA8F66007AF208 /* CategoryListViewModel.swift in Sources */,
 				AF561BD529AFC1BB000EF400 /* CategoryListTableViewController.swift in Sources */,
 				AF561BD929AFD067000EF400 /* Recipe.swift in Sources */,
 				AF561BB029AFACF7000EF400 /* AppDelegate.swift in Sources */,

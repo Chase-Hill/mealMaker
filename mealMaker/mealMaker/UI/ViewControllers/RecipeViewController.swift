@@ -39,7 +39,7 @@ class RecipeViewController: UIViewController {
                 self?.recipe = recipe
                 DispatchQueue.main.async { self?.updateUI(withRecipe: recipe) }
             case .failure(let error):
-                print(error.errorDescription ?? Constants.Error.unknownError)
+                print(error.errorDescription ?? NetworkError.unknownError)
             }
         }
     }
@@ -59,7 +59,7 @@ class RecipeViewController: UIViewController {
             case .success(let image):
                 DispatchQueue.main.async { self?.recipeImageView.image = image }
             case .failure(let error):
-                print(error.errorDescription ?? Constants.Error.unknownError)
+                print(error.errorDescription ?? NetworkError.unknownError)
             }
         }
     }

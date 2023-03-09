@@ -7,7 +7,14 @@
 
 import UIKit
 
-struct MealService {
+protocol MealServiceable {
+    func fetchAllCategories(completion: @escaping (Result<[Category], NetworkError>) -> Void)
+    func fetchMealsInCategory(forCategory category: Category, completion: @escaping (Result<[Meal], NetworkError>) -> Void)
+    func fetchRecipe(forMeal meal: Meal, completion: @escaping (Result<Recipe, NetworkError>) -> Void)
+    func fetchImage(for item: String?, completion: @escaping (Result<UIImage, NetworkError>) -> Void)
+}
+
+struct MealService: MealServiceable {
     
     // MARK: - Properties
     let service = APIService()
@@ -79,7 +86,7 @@ struct MealService {
                     if let recipe = topLevel.meals.first {
                         completion(.success(recipe))
                     } else {
-                        completion(.failure(.emptyArray)) ; return
+                        completion(.failure(.unableToDecode)) ; return
                     }
                 } catch {
                     completion(.failure(.unableToDecode)) ; return

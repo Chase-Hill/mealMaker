@@ -9,19 +9,19 @@ import Foundation
 
 struct APIService {
     
-    func perform(_ request: URLRequest, moviesLoaded: @escaping (Result <Data, NetworkError>) -> Void) {
+    func perform(_ request: URLRequest, mealsLoaded: @escaping (Result <Data, NetworkError>) -> Void) {
         URLSession.shared.dataTask(with: request) { data, response, error in
             if let error = error {
-                moviesLoaded(.failure(.thrownError(error)))
+                mealsLoaded(.failure(.thrownError(error)))
             }
             if let response = response as? HTTPURLResponse {
                 print("\(response.statusCode)")
             }
             guard let data = data else {
-                moviesLoaded(.failure(.noData))
+                mealsLoaded(.failure(.noData))
                 return
             }
-            moviesLoaded(.success(data))
+            mealsLoaded(.success(data))
         } .resume()
     }
 }

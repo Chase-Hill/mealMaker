@@ -32,7 +32,7 @@ class MealListTableViewController: UITableViewController {
                 self?.stopAnimatingAndReloadData()
                 
             case .failure(let error):
-                print(error.errorDescription ?? Constants.Error.unknownError)
+                print(error.errorDescription ?? NetworkError.unknownError)
             }
         }
     }

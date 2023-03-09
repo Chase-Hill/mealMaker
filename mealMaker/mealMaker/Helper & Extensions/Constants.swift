@@ -17,8 +17,4 @@ struct Constants {
         static let recipeQueryKey = "i"
         
     }
-    
-    struct Error {
-        static let unknownError = "An Unknown Error Has Occured...Call 867-5309. Ask For Jenny."
-    }
 }
