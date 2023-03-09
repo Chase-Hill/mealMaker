@@ -22,6 +22,7 @@
 		AF561BD929AFD067000EF400 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF561BD829AFD067000EF400 /* Recipe.swift */; };
 		AF561C1429B11BAD000EF400 /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF561C1329B11BAD000EF400 /* RecipeViewController.swift */; };
 		AF561C1629B11BD2000EF400 /* InstructionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF561C1529B11BD2000EF400 /* InstructionsViewController.swift */; };
+		AFDA41D129BA82E1007AF208 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDA41D029BA82E1007AF208 /* APIService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		AF561BD829AFD067000EF400 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		AF561C1329B11BAD000EF400 /* RecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
 		AF561C1529B11BD2000EF400 /* InstructionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionsViewController.swift; sourceTree = "<group>"; };
+		AFDA41D029BA82E1007AF208 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,7 +80,6 @@
 				AF561BC429AFAD94000EF400 /* Storyboard */,
 				AF561BD229AFC19B000EF400 /* Controllers */,
 				AF561BCD29AFB2D0000EF400 /* Helper & Extensions */,
-				AF561BCA29AFB1A5000EF400 /* Networking */,
 				AF561BC729AFADC0000EF400 /* Model */,
 			);
 			path = mealMaker;
@@ -127,6 +128,7 @@
 			children = (
 				AF561BCE29AFB2DF000EF400 /* NetworkError.swift */,
 				AF561BD029AFB466000EF400 /* Constants.swift */,
+				AFDA41D029BA82E1007AF208 /* APIService.swift */,
 			);
 			path = "Helper & Extensions";
 			sourceTree = "<group>";
@@ -134,6 +136,7 @@
 		AF561BD229AFC19B000EF400 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				AF561BCA29AFB1A5000EF400 /* Networking */,
 				AF561BD329AFC1A2000EF400 /* ViewControllers */,
 			);
 			path = Controllers;
@@ -230,6 +233,7 @@
 				AF561C1629B11BD2000EF400 /* InstructionsViewController.swift in Sources */,
 				AF561BCF29AFB2DF000EF400 /* NetworkError.swift in Sources */,
 				AF561BD129AFB466000EF400 /* Constants.swift in Sources */,
+				AFDA41D129BA82E1007AF208 /* APIService.swift in Sources */,
 				AF561BCC29AFB1B4000EF400 /* MealService.swift in Sources */,
 				AF561BB229AFACF7000EF400 /* SceneDelegate.swift in Sources */,
 				AF561BD729AFC1C3000EF400 /* MealListTableViewController.swift in Sources */,

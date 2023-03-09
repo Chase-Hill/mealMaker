@@ -18,10 +18,11 @@ class CategoryListTableViewController: UITableViewController {
 
     // MARK: - Properties
     var categoryArray: [Category] = []
+    let service = MealService()
     
     // MARK: - Functions
     func fetchAllCategories() {
-        MealService.fetchAllCategories { [weak self] result in
+        service.fetchAllCategories { [weak self] result in
             switch result {
             case .success(let categories):
                 self?.categoryArray = categories

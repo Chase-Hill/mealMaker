@@ -28,11 +28,12 @@ class RecipeViewController: UIViewController {
     // MARK: - Properties
     var meal: Meal?
     var recipe: Recipe?
-    
+    let service = MealService()
+
     // MARK: - Functions
     func fetchRecipe() {
         guard let meal = meal else { return }
-        MealService.fetchRecipe(forMeal: meal) { [weak self] result in
+        service.fetchRecipe(forMeal: meal) { [weak self] result in
             switch result {
             case .success(let recipe):
                 self?.recipe = recipe
@@ -53,7 +54,7 @@ class RecipeViewController: UIViewController {
     }
     
     func fetchRecipeImage() {
-        MealService.fetchImage(for: recipe?.imageURL) { [weak self] result in
+        service.fetchImage(for: recipe?.imageURL) { [weak self] result in
             switch result {
             case .success(let image):
                 DispatchQueue.main.async { self?.recipeImageView.image = image }

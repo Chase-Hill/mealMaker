@@ -20,11 +20,12 @@ class MealListTableViewController: UITableViewController {
     var category: Category?
     var mealArray: [Meal] = []
     var activityIndicator = UIActivityIndicatorView()
+    let service = MealService()
     
     // MARK: - Functions
     func fetchMealsInCategory() {
         guard let category = category else { return }
-        MealService.fetchMealsInCategory(forCategory: category) { [weak self] result in
+        service.fetchMealsInCategory(forCategory: category) { [weak self] result in
             switch result {
             case .success(let meals):
                 self?.mealArray = meals
